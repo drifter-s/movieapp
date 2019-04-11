@@ -1,0 +1,21 @@
+<% include partials/header %>
+<h2>Results For the ID</h2>
+
+
+  <ul>Title-   <%= data["Title"] %> </ul> 
+  <ul>Year -   <%= data["Year"] %> </ul>
+  <ul>Director-<%= data["Director"] %></ul>
+  <ul>Actors- <%= data["Actors"] %></ul>
+  <ul>Genre -  <%= data["Genre"] %> </ul>
+  <ul>Plot- <%= data["Plot"] %></ul>
+  <ul> Ratings-
+  <% data["Ratings"].forEach(function(id) { %>
+    <ul>Source- <%= id["Source"] %> </ul> 
+    <ul>Rating- <%= id["Value"] %> </ul>
+
+<% })%>
+  </ul>
+  
+<a href="/">Back</a>
+<% include partials/footer %>
+

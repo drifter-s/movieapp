@@ -1,0 +1,17 @@
+<% include partials/header %>
+
+<h1>Search For a Movie </h1>
+
+<div class="title">
+<h2>Search by word</h2>
+<form action = "/results" method="GET">
+    <input name="search" type="text" placeholder = "Enter the word" >
+    <input type="submit" >
+</form>
+<h2> Search by ID </h2>
+<form action = "/resultsid" method="GET">
+    <input name="id" type="text" placeholder = "Enter the ID" >
+    <input type="submit">
+</form>
+</div>
+<% include partials/footer %>

@@ -1,0 +1,19 @@
+<% include partials/header %> 
+
+ <h2>Results of Search </h2>
+
+<% data["Search"].forEach(function(movie) { %>
+<li>
+  <ul> Title- <%= movie["Title"] %> </ul> 
+  <ul>Year - <%= movie["Year"] %> </ul>
+  <ul>Type - <%= movie["Type"] %> </ul>
+  <ul>imdbID - <a href = "/resultsid?id=<%= movie["imdbID"] %>"> <%= movie["imdbID"] %></a></ul>
+  
+   
+   </li>
+<% })%>
+
+
+<a href="/">Back</a>
+
+<% include partials/footer %>
